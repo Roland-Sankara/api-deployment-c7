@@ -1,8 +1,10 @@
 const express = require('express')
 const dataStore = require('./dataStore')
+const cors = require('cors')
 const server = express()
 
 server.use(express.json())
+server.use(cors())
 
 // Fetch the data
 server.get('/data', (req, res)=>{
